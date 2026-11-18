@@ -61,4 +61,3 @@ The tests cover item rules, resource loss, armor, purchases, ordered puzzles, co
 
 This is a Canvas prototype, **not the design document's Godot/C++ implementation**. It does not validate GDExtension web compilation, final physics feel, 3D presentation, or 15-minute pacing. Alternate layouts, additional dungeon types, full ramps/spinners, lane skill shots, wandering encounters, persistent unlocks, and a high-score list are not implemented.
 
-[DESIGN_REVIEW.md](DESIGN_REVIEW.md) records the original PDF handoff assessment. [design-decisions.json](design-decisions.json) separates prototype assumptions from later requested changes. The source PDF is not bundled in this repository.
