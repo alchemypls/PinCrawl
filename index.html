@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#151a17" />
+    <title>Pinball Dungeon Crawl</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <aside>
+        <a class="brand" href="./">A WIZARD. A BALL. A VERY UPSET DRAGON.</a>
+        <p class="eyebrow">PLAYABLE DESIGN STUDY / 001</p>
+        <h1>
+          Pinball<br />
+          Dungeon<br />
+          <em>Crawl.</em>
+        </h1>
+        <p class="intro">Beneath a ruined kingdom,<br />every shot goes deeper.</p>
+        <div class="rule"></div>
+        <p class="eyebrow">THE QUEST</p>
+        <p>
+          Break the guards. Shoot a cave.<br />Clear two dungeons.<br />Take the tome from the
+          dragon.
+        </p>
+        <div class="keys">
+          <p><kbd>A</kbd><kbd>←</kbd> Left flipper</p>
+          <p><kbd>D</kbd><kbd>→</kbd> Right flipper</p>
+          <p><kbd>SPACE</kbd> Launch ball</p>
+          <p><kbd>P</kbd> Pause <span>·</span> <kbd>M</kbd> Sound</p>
+        </div>
+        <p class="small">
+          Three lives. A drain takes your gold and both items. The kingdom remembers your progress.
+        </p>
+        <button id="restart">NEW RUN <span>↗</span></button>
+        <p class="build">
+          LOCAL PROTOTYPE · ONE TABLE PER TIER<br />Browser physics · original design document
+        </p>
+      </aside>
+      <section class="machine" aria-label="Pinball machine">
+        <header><span>THE RUINED KINGDOM</span><span id="best">BEST 000000</span></header>
+        <div class="backbox" role="status" aria-live="polite">
+          <div class="stats">
+            <span id="score">000000</span><span id="gold">GOLD 00</span
+            ><span id="lives">◆ ◆ ◆</span>
+          </div>
+          <div id="message">SPACE TO AWAKEN THE WIZARD</div>
+        </div>
+        <div class="table-wrap">
+          <canvas
+            id="table"
+            width="520"
+            height="840"
+            aria-label="Pinball playfield. Use A and D or arrow keys for flippers and Space to launch."
+          ></canvas
+          ><button id="pause" aria-label="Pause game">Ⅱ</button>
+        </div>
+        <div class="touch">
+          <button id="left" aria-label="Left flipper">◀ LEFT</button
+          ><button id="launch">LAUNCH ↑</button
+          ><button id="right" aria-label="Right flipper">RIGHT ▶</button>
+        </div>
+        <footer>
+          <span id="loadout">L: EMPTY &nbsp; / &nbsp; R: EMPTY</span
+          ><span id="stage">I · COUNTRYSIDE</span>
+        </footer>
+      </section>
+      <aside class="notes">
+        <p class="eyebrow">01 / THE MACHINE</p>
+        <h2>Pure pinball.<br />Dungeon rules.</h2>
+        <p>
+          The ball carries the item of the last flipper to touch it. A sword hits harder. Fire
+          breaks armor. A purse pays double. A ward saves one drain.
+        </p>
+        <div class="journey">
+          <div class="active" data-step="0">
+            <b>01</b><span>The countryside<small>Break guards · open a cave</small></span>
+          </div>
+          <div data-step="1">
+            <b>02</b><span>Goblin warren<small>Break all three goblins</small></span>
+          </div>
+          <div data-step="2">
+            <b>03</b><span>The crypt<small>Four skeletons, in order</small></span>
+          </div>
+          <div data-step="3">
+            <b>04</b><span>The dragon’s lair<small>Break its guard · reclaim the tome</small></span>
+          </div>
+        </div>
+        <p class="small">
+          Shoot the left rail to enter the inn. Inside are three items to buy with gold. Hit one,
+          then press the flipper you want to equip.
+        </p>
+        <p class="small">
+          In dungeons, choose one of three lit loot targets or shoot the exit to leave without loot.
+        </p>
+        <div class="seal">
+          ✦<span>NO POWER CARRIES OVER.<br />ONLY YOUR HIGH SCORE.</span>
+        </div>
+      </aside>
+    </main>
+    <script type="module" src="src/game.js"></script>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+{
+  "name": "pinball-dungeon-crawl",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node server.mjs",
+    "test": "node --test",
+    "check": "node --check server.mjs && node --check src/game.js && node --check src/rules.js && npm run format:check",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "devDependencies": {
+    "prettier": "3.6.2"
+  },
+  "description": "A local fantasy pinball prototype with dungeon encounters and a three-choice inn.",
+  "engines": {
+    "node": ">=20.11.0"
+  }
+}
